@@ -3,21 +3,42 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Baidu Hi iOS 技术周报-2015.09.06 | 百度Hi iOS团队技术周报</title>
+  <title>百度Hi iOS团队技术周报</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="《Enemy of the State》主要是讲程序设计中state的坏处，以及用stateless编程的好处。这也是近些年来Functional Programming重新流行起来的很重要的原因之一。BTW，推荐这个Slides也是为了安利ReactiveCocoa：），可以大幅度的减少iOS开发中的state。
-『ReactiveCocoa』再推荐几篇ReactiveCocoa相关的文章，之前">
+  <meta name="description" content="##20150921技术周报感谢本期周报投稿同学：曹华，张萌，桉远
+###文章：
+代码整洁之所以重要的七个理由
+技术债务：究竟让你付出了多大代价？
+CocoaPods的一些略为高级一丁点的使用
+iOS9适配系列教程
+iOS 9 开发高级技巧 - 通过 12 个团队所提供的技巧来快速适配 iOS 9
+Code examples for the new features of iOS 9
+On Usi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Baidu Hi iOS 技术周报-2015.09.06">
-<meta property="og:url" content="http://yoursite.com/2015/09/07/20150906/index.html">
+<meta property="og:title" content="百度Hi iOS团队技术周报">
+<meta property="og:url" content="http://yoursite.com/2015/11/22/20150921/index.html">
 <meta property="og:site_name" content="百度Hi iOS团队技术周报">
-<meta property="og:description" content="《Enemy of the State》主要是讲程序设计中state的坏处，以及用stateless编程的好处。这也是近些年来Functional Programming重新流行起来的很重要的原因之一。BTW，推荐这个Slides也是为了安利ReactiveCocoa：），可以大幅度的减少iOS开发中的state。
-『ReactiveCocoa』再推荐几篇ReactiveCocoa相关的文章，之前">
+<meta property="og:description" content="##20150921技术周报感谢本期周报投稿同学：曹华，张萌，桉远
+###文章：
+代码整洁之所以重要的七个理由
+技术债务：究竟让你付出了多大代价？
+CocoaPods的一些略为高级一丁点的使用
+iOS9适配系列教程
+iOS 9 开发高级技巧 - 通过 12 个团队所提供的技巧来快速适配 iOS 9
+Code examples for the new features of iOS 9
+On Usi">
 <meta property="og:updated_time" content="2015-09-25T06:49:09.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Baidu Hi iOS 技术周报-2015.09.06">
-<meta name="twitter:description" content="《Enemy of the State》主要是讲程序设计中state的坏处，以及用stateless编程的好处。这也是近些年来Functional Programming重新流行起来的很重要的原因之一。BTW，推荐这个Slides也是为了安利ReactiveCocoa：），可以大幅度的减少iOS开发中的state。
-『ReactiveCocoa』再推荐几篇ReactiveCocoa相关的文章，之前">
+<meta name="twitter:title" content="百度Hi iOS团队技术周报">
+<meta name="twitter:description" content="##20150921技术周报感谢本期周报投稿同学：曹华，张萌，桉远
+###文章：
+代码整洁之所以重要的七个理由
+技术债务：究竟让你付出了多大代价？
+CocoaPods的一些略为高级一丁点的使用
+iOS9适配系列教程
+iOS 9 开发高级技巧 - 通过 12 个团队所提供的技巧来快速适配 iOS 9
+Code examples for the new features of iOS 9
+On Usi">
   
     <link rel="alternative" href="/atom.xml" title="百度Hi iOS团队技术周报" type="application/atom+xml">
   
@@ -63,40 +84,37 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-20150906" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-20150921" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/09/07/20150906/" class="article-date">
-  <time datetime="2015-09-07T00:00:00.000Z" itemprop="datePublished">2015-09-07</time>
+    <a href="/2015/11/22/20150921/" class="article-date">
+  <time datetime="2015-11-22T14:14:39.000Z" itemprop="datePublished">2015-11-22</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Baidu Hi iOS 技术周报-2015.09.06
-    </h1>
-  
-
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="《Enemy_of_the_State》">《<a href="https://github.com/jspahrsummers/enemy-of-the-state" target="_blank" rel="external">Enemy of the State</a>》</h2><p>主要是讲程序设计中<code>state</code>的坏处，以及用<code>stateless</code>编程的好处。这也是近些年来<code>Functional Programming</code>重新流行起来的很重要的原因之一。<br>BTW，推荐这个Slides也是为了安利<code>ReactiveCocoa</code>：），可以大幅度的减少iOS开发中的<code>state</code>。</p>
-<h2 id="『ReactiveCocoa』">『<a href="https://github.com/ReactiveCocoa/ReactiveCocoa" target="_blank" rel="external">ReactiveCocoa</a>』</h2><p>再推荐几篇<code>ReactiveCocoa</code>相关的文章，之前<code>ReactiveCocoa</code> 2.x由于<code>Objective-C</code>自身语言特性的限制，API还是显得比较繁重。有了更加函数式的<code>Swift</code>语言之后，用<code>Swift</code>重写的<code>ReactiveCocoa</code> 3.x更加充分的展现了<code>Reactive Functional Programming</code>的特点，API更加轻量清晰，语法更简洁，非常推荐入手。</p>
-<p>《<a href="https://gist.github.com/staltz/868e7e9bc2a7b8c1f754" target="_blank" rel="external">The introduction to Reactive Programming you’ve been missing</a>》，虽然是针对<code>JavaScript</code>的<code>Rx</code>库的，但是对<code>Reactive Programming</code>思想描述的非常清晰明了。</p>
-<p>两篇<code>ReactiveCocoa</code> 3.0的API入门文章：</p>
-<p>《<a href="http://blog.scottlogic.com/2015/04/24/first-look-reactive-cocoa-3.html" target="_blank" rel="external">A FIRST LOOK AT REACTIVECOCOA 3.0</a>》</p>
-<p>《<a href="http://blog.scottlogic.com/2015/04/28/reactive-cocoa-3-continued.html" target="_blank" rel="external">REACTIVECOCOA 3.0 - SIGNAL PRODUCERS AND API CLARITY</a>》</p>
-<h2 id="《Leveling_Up》">《<a href="https://www.bignerdranch.com/blog/leveling-up/" target="_blank" rel="external">Leveling Up</a>》</h2><p>个人觉得是一篇很好的iOS进阶提升的一个好文章，推荐给有一定iOS开发经验并想继续提升自己的同学。</p>
+        <p>##20150921技术周报<br>感谢本期周报投稿同学：曹华，张萌，桉远</p>
+<p>###文章：</p>
+<p><a href="http://blog.jobbole.com/61312/" target="_blank" rel="external">代码整洁之所以重要的七个理由</a></p>
+<p><a href="http://blog.jobbole.com/25137/" target="_blank" rel="external">技术债务：究竟让你付出了多大代价？</a></p>
+<p><a href="http://supermao.cn/cocoapodsde-xie-lue-wei-gao-ji-ding-dian-de-shi-yong/" target="_blank" rel="external">CocoaPods的一些略为高级一丁点的使用</a></p>
+<p><a href="https://github.com/ChenYilong/iOS9AdaptationTips" target="_blank" rel="external">iOS9适配系列教程</a></p>
+<p><a href="https://realm.io/cn/news/tips-for-ios-9-development/" target="_blank" rel="external">iOS 9 开发高级技巧 - 通过 12 个团队所提供的技巧来快速适配 iOS 9</a></p>
+<p><a href="https://github.com/shu223/iOS-9-Sampler" target="_blank" rel="external">Code examples for the new features of iOS 9</a></p>
+<p><a href="https://www.objc.io/issues/4-core-data/SQLite-instead-of-core-data/" target="_blank" rel="external">On Using SQLite and FMDB Instead of Core Data</a>：关于使用Sqlite的一些实践，对我们项目里Sqlite的使用有很多可以借鉴的东西。</p>
+<p><a href="http://alisoftware.github.io/swift/2015/09/06/thinking-in-swift-1/" target="_blank" rel="external">Thinking in Swift, Part 1: Saving ponies</a><br>：这篇文章对比oc和Swift， 来帮助读者更快适应Swift的思考方式。</p>
+<p><a href="http://alisoftware.github.io/swift/enum/constants/2015/07/19/enums-as-constants/" target="_blank" rel="external">Enums as constants</a>：本文介绍了很多Swift中enum的使用场景，很值得学习。</p>
+<p><a href="http://swift.gg/" target="_blank" rel="external">SwiftGG</a>：翻译的Swift国外优秀技术博客</p>
+<p>###开源代码：<br>Facebook的开源库 <a href="http://facebook.github.io/react-native/" target="_blank" rel="external">React Native</a>，使用 React.js 开发原生应用</p>
+<p>开源库<a href="https://github.com/marcoarment/FCModel" target="_blank" rel="external">FCModel</a>依据<a href="https://www.objc.io/issues/4-core-data/SQLite-instead-of-core-data/" target="_blank" rel="external">On Using SQLite and FMDB Instead of Core Data</a>做了实现。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/09/07/20150906/" data-id="ciham4i0o000d0kitfqbmvbdh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/22/20150921/" data-id="ciham4i0l000b0kit2juvymse" class="article-share-link">Share</a>
       
       
     </footer>
@@ -105,19 +123,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/09/14/20150914/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/11/22/20151005/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Baidu Hi iOS 技术周报-2015.09.14
+          (no title)
         
       </div>
     </a>
   
   
-    <a href="/2015/08/29/20150829/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2015/11/22/20151123/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Baidu Hi iOS 技术周报-2015.08.29</div>
+      <div class="article-nav-title">2015.11.23技术周报</div>
     </a>
   
 </nav>
