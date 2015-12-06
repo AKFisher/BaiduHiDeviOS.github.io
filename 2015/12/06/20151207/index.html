@@ -13,7 +13,7 @@
 Swift Programming Language
 
 官网：swift.org
-文档：需要用安装Sphinx（-U Sphinx```），安装后，在源码">
+文档：需要用安装Sphinx（easy_install -U Sphin">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2015.12.07技术周报">
 <meta property="og:url" content="http://yoursite.com/2015/12/06/20151207/index.html">
@@ -26,8 +26,8 @@ Swift Programming Language
 Swift Programming Language
 
 官网：swift.org
-文档：需要用安装Sphinx（-U Sphinx```），安装后，在源码">
-<meta property="og:updated_time" content="2015-12-06T09:01:56.000Z">
+文档：需要用安装Sphinx（easy_install -U Sphin">
+<meta property="og:updated_time" content="2015-12-06T09:34:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2015.12.07技术周报">
 <meta name="twitter:description" content="感谢本期周报线索提供同学: 张萌， 桉远。
@@ -38,7 +38,7 @@ Swift Programming Language
 Swift Programming Language
 
 官网：swift.org
-文档：需要用安装Sphinx（-U Sphinx```），安装后，在源码">
+文档：需要用安装Sphinx（easy_install -U Sphin">
   
     <link rel="alternative" href="/atom.xml" title="百度Hi iOS团队技术周报" type="application/atom+xml">
   
@@ -114,14 +114,14 @@ Swift Programming Language
 <p><a href="https://github.com/apple/swift" target="_blank" rel="external">Swift Programming Language</a></p>
 <ul>
 <li>官网：swift.org</li>
-<li><p>文档：需要用安装Sphinx（<figure class="highlight"><figcaption><span>-U Sphinx```），安装后，在源码文件夹下```docs``` 执行```make```， 将.rst格式转成.html文件，输出的文档在```docs/_build/html```, 然而并没有像README上说的那样有whitpaper/index.html, 也许是因为文档没有及时更新吧，不过没关系，可以根据自己想看的文档查看对应专题的网页文件。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* &#28304;&#30721;&#65306; &#22914;&#26524;&#21482;&#24819;&#35201;&#38405;&#35835;&#28304;&#30721;&#32780;&#19981;&#20687;&#20462;&#25913;&#65292;&#21487;&#20197;clone&#20197;&#19979;&#20195;&#30721;&#65292;&#10;&#9;*  swift&#35821;&#35328;&#28304;&#30721;, &#21487;&#20197;&#20027;&#35201;&#26597;&#30475;stdlib&#25991;&#20214;&#22841;&#19979;&#30340;&#28304;&#30721;&#65306; ```git clone https://github.com/apple/swift.git swift</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li><p>swift 编译器llvm代码： <figure class="highlight"><figcaption><span>clone</span><a href="https://github.com/apple/swift-llvm.git" target="_blank" rel="external">llvm```</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*  swift&#32534;&#35793;c&#30456;&#20851;&#32534;&#35793;&#22120;&#28304;&#30721;&#65306; ```git clone https://github.com/apple/swift-clang.git clang</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li><p>lldb:  <figure class="highlight"><figcaption><span>clone</span><a href="https://github.com/apple/swift-clang.git" target="_blank" rel="external">clang```</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*  swift&#21253;&#31649;&#29702;&#24037;&#20855;&#28304;&#30721;&#65306; ```git clone https://github.com/apple/swift-package-manager.git swiftpm</span><br></pre></td></tr></table></figure></p>
-</li>
-<li><p>swift foundation源码，基于OC开源Foudation, NS*.swift源码：<code>git clone https://github.com/apple/swift-corelibs-foundation.git</code></p>
-</li>
+<li>文档：需要用安装Sphinx（<code>easy_install -U Sphinx</code>），安装后，在源码文件夹下<code>docs</code> 执行<code>make</code>， 将.rst格式转成.html文件，输出的文档在<code>docs/_build/html</code>, 然而并没有像README上说的那样有whitpaper/index.html, 也许是因为文档没有及时更新吧，不过没关系，可以根据自己想看的文档查看对应专题的网页文件。</li>
+<li>源码： 如果只想要阅读源码而不像修改，可以clone以下代码，<ul>
+<li>swift语言源码, 可以主要查看stdlib文件夹下的源码： <code>git clone https://github.com/apple/swift.git swift</code></li>
+<li>swift 编译器llvm代码： <code>git clone https://github.com/apple/swift-llvm.git llvm</code></li>
+<li>swift编译c相关编译器源码： <code>git clone https://github.com/apple/swift-clang.git clang</code><ul>
+<li>lldb:  <code>git clone https://github.com/apple/swift-clang.git clang</code></li>
+<li>swift包管理工具源码： <code>git clone https://github.com/apple/swift-package-manager.git swiftpm</code></li>
+<li>swift foundation源码，基于OC开源Foudation, NS*.swift源码：<code>git clone https://github.com/apple/swift-corelibs-foundation.git</code></li>
 </ul>
 </li>
 </ul>
@@ -139,7 +139,7 @@ Swift Programming Language
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/06/20151207/" data-id="cihuaw65h0002biitqs5jaqhc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/06/20151207/" data-id="cihuc1hbn0002j0it2hz7y54k" class="article-share-link">Share</a>
       
       
     </footer>
