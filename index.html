@@ -61,6 +61,71 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-20151207" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/06/20151207/" class="article-date">
+  <time datetime="2015-12-06T09:01:06.000Z" itemprop="datePublished">2015-12-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/06/20151207/">2015.12.07技术周报</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>感谢本期周报线索提供同学: 张萌， 桉远。</p>
+<p>周报汇总 <a href="https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly" target="_blank" rel="external">地址</a></p>
+<p>周报博客 <a href="http://baiduhidevios.github.io/" target="_blank" rel="external">地址</a></p>
+<p>###开源代码：</p>
+<p>最近Apple开源了其编程语言Swift，以下为桉远对Github上Swift开源项目一个导览，希望有对其中感兴趣的同学，可以直接找到对应的项目源码。</p>
+<p><a href="https://github.com/apple/swift" target="_blank" rel="external">Swift Programming Language</a></p>
+<ul>
+<li>官网：swift.org</li>
+<li><p>文档：需要用安装Sphinx（<figure class="highlight"><figcaption><span>-U Sphinx```），安装后，在源码文件夹下```docs``` 执行```make```， 将.rst格式转成.html文件，输出的文档在```docs/_build/html```, 然而并没有像README上说的那样有whitpaper/index.html, 也许是因为文档没有及时更新吧，不过没关系，可以根据自己想看的文档查看对应专题的网页文件。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* &#28304;&#30721;&#65306; &#22914;&#26524;&#21482;&#24819;&#35201;&#38405;&#35835;&#28304;&#30721;&#32780;&#19981;&#20687;&#20462;&#25913;&#65292;&#21487;&#20197;clone&#20197;&#19979;&#20195;&#30721;&#65292;&#10;&#9;*  swift&#35821;&#35328;&#28304;&#30721;, &#21487;&#20197;&#20027;&#35201;&#26597;&#30475;stdlib&#25991;&#20214;&#22841;&#19979;&#30340;&#28304;&#30721;&#65306; ```git clone https://github.com/apple/swift.git swift</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>swift 编译器llvm代码： <figure class="highlight"><figcaption><span>clone</span><a href="https://github.com/apple/swift-llvm.git" target="_blank" rel="external">llvm```</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*  swift&#32534;&#35793;c&#30456;&#20851;&#32534;&#35793;&#22120;&#28304;&#30721;&#65306; ```git clone https://github.com/apple/swift-clang.git clang</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>lldb:  <figure class="highlight"><figcaption><span>clone</span><a href="https://github.com/apple/swift-clang.git" target="_blank" rel="external">clang```</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*  swift&#21253;&#31649;&#29702;&#24037;&#20855;&#28304;&#30721;&#65306; ```git clone https://github.com/apple/swift-package-manager.git swiftpm</span><br></pre></td></tr></table></figure></p>
+</li>
+<li><p>swift foundation源码，基于OC开源Foudation, NS*.swift源码：<code>git clone https://github.com/apple/swift-corelibs-foundation.git</code></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>想快速上首swift2.2的可以下载<a href="https://swift.org/builds/xcode/swift-2.2-SNAPSHOT-2015-12-01-a/swift-2.2-SNAPSHOT-2015-12-01-a-osx.pkg" target="_blank" rel="external">Xcode Swift 2.2 Snapshot</a>, 经过安装后，可以在terminal中<code>alias swift22=&quot;/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin/swift&quot;</code>, 不但可以启动REPL，还可以使用swift package manager。 注：只有Xcode 7.2可以使用swift 2.2.</li>
+<li><a href="https://swift.org/getting-started/#using-the-build-system" target="_blank" rel="external">swift package manager</a> 相关示例<a href="https://github.com/apple/example-package-dealer" target="_blank" rel="external">代码</a>:根据提示只要clone下示例工程，进入文件夹，运行<code>swift build</code>即可完成对应依赖工程的下载编译，非常方便，不过目前作者说还只是基础功能，目前还暂不支持iOS,watchOS,tvOS.</li>
+</ul>
+<h3 id="文章：">文章：</h3><p><a href="http://www.jianshu.com/p/326527a4d4f9" target="_blank" rel="external">深入理解Kingfisher（上）</a></p>
+<p><a href="http://www.jianshu.com/p/0a5cdf3f7e9c" target="_blank" rel="external">深入理解Kingfisher（下）</a></p>
+<p><a href="http://ksnowlv.github.io/blog/2014/09/07/ios-tong-bu-suo-xing-neng-dui-bi/" target="_blank" rel="external">iOS同步对象性能对比</a></p>
+<p><a href="http://onevcat.com/2014/07/ios-ui-unique/" target="_blank" rel="external">WWDC 2014 Session笔记 - iOS界面开发的大一统</a> ：什么时候可以抛弃iOS 7了，好多UI实现都可以换了</p>
+<p><a href="http://blog.callmewhy.com/2014/09/12/learn-ios8-size-class/" target="_blank" rel="external">初探 iOS8 中的 Size Class</a></p>
+<h3 id="程序员的自我修养">程序员的自我修养</h3><p><a href="http://zhuanlan.zhihu.com/zhengyun/20270317" target="_blank" rel="external">技术高手如何炼成</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/12/06/20151207/" data-id="cihuaw65h0002biitqs5jaqhc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-20151130" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/11/29/20151130/" class="article-date">
@@ -106,7 +171,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/29/20151130/" data-id="cihkhkahm0002p6l33brxh6wu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/29/20151130/" data-id="cihuaw65i0003biit0fjgtjcz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -159,7 +224,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/22/20151123/" data-id="cihkhkaho0003p6l3zigwxde5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/22/20151123/" data-id="cihuaw65j0004biitjiqwttc9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -222,7 +287,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/16/20151116/" data-id="cihkhkahq0004p6l305on53eb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/16/20151116/" data-id="cihuaw65l0005biitpdxmao7f" class="article-share-link">Share</a>
       
       
     </footer>
@@ -281,7 +346,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/09/20151109/" data-id="cihkhkahs0005p6l3lrharusv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/09/20151109/" data-id="cihuaw65m0006biitl5x16ed7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -340,7 +405,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/02/20151102/" data-id="cihkhkahu0006p6l3j3l3skod" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/02/20151102/" data-id="cihuaw65n0007biit1khu3atd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -386,7 +451,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/26/20151026/" data-id="cihkhkahw0007p6l348ka8cqo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/10/26/20151026/" data-id="cihuaw65p0008biitwnjkegtv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -444,7 +509,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/19/20151019/" data-id="cihkhkahy0008p6l31cj7y73m" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/10/19/20151019/" data-id="cihuaw65q0009biit9rsw8cyg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -488,7 +553,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/12/20151012/" data-id="cihkhkai10009p6l3t8efc2l6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/10/12/20151012/" data-id="cihuaw65s000abiitxs0bped6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -534,53 +599,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/05/20151005/" data-id="cihkhkai2000ap6l3fltyarat" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-20150928" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/09/28/20150928/" class="article-date">
-  <time datetime="2015-09-28T00:00:00.000Z" itemprop="datePublished">2015-09-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/28/20150928/">Baidu Hi iOS 技术周报-2015.09.28</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>感谢本期周报投稿同学：张萌，桉远</p>
-<h3 id="文章：">文章：</h3><p><a href="http://appventure.me/2015/08/20/swift-pattern-matching-in-detail/" target="_blank" rel="external">Swift 模式识别详解</a>：不必多说，好文章！</p>
-<p><a href="http://krakendev.io/blog/the-right-way-to-write-a-singleton" target="_blank" rel="external">Swift 2.0 如何写单例</a>： 在项目中，我们经常会使用单例，在Swift如何写正确的写单例呢？本文作者详细讲述OC到Swift单例写法的变化，最后作者提出了一个最为简洁，优雅的写法。</p>
-<p><a href="http://alisoftware.github.io/swift/2015/09/20/thinking-in-swift-2/" target="_blank" rel="external">Thinking in Swift, Part 2: map those arrays</a>: Thinking in Swift 系列文章的第二篇，继续推荐。</p>
-<p><a href="http://codeblog.shape.dk/blog/2013/12/16/live-editing-layout-constants-using-classy/" target="_blank" rel="external">Live Editing Layout Constants Using Classy, Masonry and ClassyLiveLayout</a>：实时显示iOS编写UI代码效果</p>
-<h3 id="开源代码：">开源代码：</h3><p>新的依赖管理工具 <a href="https://github.com/Carthage/Carthage" target="_blank" rel="external">Carthage</a>，和Cocoapods相比，Carthage是非侵入式的，不会修改xcode工程文件，只是帮助build出来frameworks。更灵活更干净。</p>
-<p><a href="https://github.com/SnapKit/SnapKit" target="_blank" rel="external">SnapKit</a>: SnapKit is a DSL to make Auto Layout easy on both iOS and OS X.</p>
-<p><a href="https://github.com/robbiehanson/XcodeColors" target="_blank" rel="external">XcodeColors</a>: 日志按类别显示颜色插件</p>
-<p><a href="https://github.com/twostraws/HackingWithSwift" target="_blank" rel="external">Hacking With Swift</a>: Swift 教程，以做小项目学习Swift</p>
-<p><a href="https://github.com/Anviking/Decodable" target="_blank" rel="external">Decodable</a>: Swift 解析JSON, Chris Lattner(LLVM 作者) 推荐</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/09/28/20150928/" data-id="cihkhkai4000bp6l3hvmld4r1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/10/05/20151005/" data-id="cihuaw65t000bbiitz1fci6g9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -609,7 +628,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -619,6 +638,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/12/06/20151207/">2015.12.07技术周报</a>
+          </li>
         
           <li>
             <a href="/2015/11/29/20151130/">2015.11.30技术周报</a>
@@ -634,10 +657,6 @@
         
           <li>
             <a href="/2015/11/09/20151109/">Baidu Hi iOS 技术周报-2015.11.09</a>
-          </li>
-        
-          <li>
-            <a href="/2015/11/02/20151102/">Baidu Hi iOS 技术周报-2015.11.02</a>
           </li>
         
       </ul>
