@@ -61,6 +61,59 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-iOS应用文件目录结构简介" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/26/iOS应用文件目录结构简介/" class="article-date">
+  <time datetime="2015-12-26T07:24:51.000Z" itemprop="datePublished">2015-12-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/26/iOS应用文件目录结构简介/">iOS应用文件目录结构简介</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="iOS_标准目录结构">iOS 标准目录结构</h3><p>出于安全考虑，iOS只有特定目录可以写入数据。 当一款应用安装在设备上后，系统会创建一些系统目录给应用使用，一款应用只有权限访问其自己的路径下的数据。</p>
+<h2 id="AppName-app">AppName.app</h2><p>整个应用的bundle文件。此目录包含整个应用和其所使用到的所有资源。 <em>此路径不能写， 只可读</em>， 如果强行写入，会改变安装时在系统注册的该目录的签名，如果签名改变，系统会组织程序启动。</p>
+<h2 id="Documents/">Documents/</h2><p>用于存储用户产生的内容。 此目录会被iTunes<em>默认备份</em></p>
+<h2 id="Documents/Inbox">Documents/Inbox</h2><p>此目录用于保存用于其他应用打开的文件。 例如，Mail应用汇将和此应用有关的附件保存于这个路径。 Documents interaction Controllers 也会放文件于此目录。</p>
+<p>自己应用可以读取和删除此目录文件，但是<em>不能创建新文件或者写入已经存在的文件</em>， 如果要对该目录文件进行修改，请将要修改的文件移除到其他目录。<br><em>此目录默认被iTunes备份</em></p>
+<h2 id="Library/">Library/</h2><p>此目录用于保存非用户数据文件。 Library下的子目录可以用于保存那些不希望用户看到的数据文件。<em>不要用Library下的目录保存用户数据文件</em></p>
+<p>Library目录下(除了Caches目录及其子目录)会被<em>iTunes默认备份</em></p>
+<p>##tmp/<br>用于那些不需要在每次启动需要持久化的临时文件。手动删除那些此路径下不用的临时文件。当应用没有运行时，系统也许会删除此目录下的文件。</p>
+<p><em>此目录默认不会被iTunes备份</em></p>
+<h3 id="应用产生的文件应该放在哪">应用产生的文件应该放在哪</h3><p>为了避免iOS设备间同步和备份流程耗时太久，应该对文件归属目录的选择特别注意。</p>
+<ul>
+<li>将用户数据保存于 Documents/. 用户数据包括那些需要让暴露给用户的文件 — 用户可以创建，删除，编辑的文件。 例如，对于视频和音频应用，用户数据包括用户下载过的文件等。</li>
+<li>将应用创建的文件保存于Library/Application support/路径下。此目录下，用于保存应用自身使用，不暴露给用户的数据文件。包括数据文件，配置文件，模板文件和版本特定的资源文件等。</li>
+<li>谨记保存于Documents/ 和 Application support/ 目录下的文件是<em>默认备份的</em>。可以使用<code>[NSURL setResourceValue:forKey:error:]</code>使用<code>NSURLIsExcludeFromBackupKey</code> key. <em>任何可以被重新下载的文件，一定不要进行备份</em>。</li>
+<li>将数据缓存数据保存于Library/Caches 目录下。 缓存数据是那些没用该数据，应用也可以正常运行的数据， 但如果有缓存数据，会提高应用的性能。 例如，数据库缓存文件，可以下载的内容等。 <em>注意：系统也许会删除Caches/下的文件，来释放磁盘空间</em></li>
+</ul>
+<p>参考: <a href="https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html" target="_blank" rel="external">File System programming guide</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/12/26/iOS应用文件目录结构简介/" data-id="cil6jsyd30002t9itq3eb9hey" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-20151221" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/12/20/20151221/" class="article-date">
@@ -101,7 +154,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/20/20151221/" data-id="cikwg2vri000cdqitzazwjsn1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/20/20151221/" data-id="cil6jsydi000dt9itlon94ymi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -148,7 +201,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/16/20151214/" data-id="cikwg2vrk000ddqitcrfegwc0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/16/20151214/" data-id="cil6jsydj000et9iti6h32ohx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -212,7 +265,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/06/20151207/" data-id="cikwg2vrm000edqitzdhbdrg8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/12/06/20151207/" data-id="cil6jsydn000ft9ittpncamri" class="article-share-link">Share</a>
       
       
     </footer>
@@ -267,7 +320,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/29/20151130/" data-id="cikwg2vro000fdqitrqr9dnpp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/29/20151130/" data-id="cil6jsydp000gt9iti0o7xntn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -320,7 +373,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/22/20151123/" data-id="cikwg2vrq000gdqit0hwwqsne" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/22/20151123/" data-id="cil6jsyds000ht9itbk6tfutt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -383,7 +436,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/16/20151116/" data-id="cikwg2vrt000hdqit6kyz06tw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/16/20151116/" data-id="cil6jsydv000it9itvpobaiig" class="article-share-link">Share</a>
       
       
     </footer>
@@ -442,7 +495,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/09/20151109/" data-id="cikwg2vrv000idqith839ccnd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/09/20151109/" data-id="cil6jsydx000jt9itc30rp94t" class="article-share-link">Share</a>
       
       
     </footer>
@@ -501,7 +554,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/02/20151102/" data-id="cikwg2vrw000jdqitgyellrf2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/02/20151102/" data-id="cil6jsye4000kt9itm3u0kfe4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -547,65 +600,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/26/20151026/" data-id="cikwg2vs0000kdqitlzqf3p3e" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-20151019" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/10/19/20151019/" class="article-date">
-  <time datetime="2015-10-19T00:00:00.000Z" itemprop="datePublished">2015-10-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/19/20151019/">Baidu Hi iOS 技术周报-2015.10.19</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="文章：">文章：</h3><p>《<a href="http://blog.jobbole.com/63130/" target="_blank" rel="external">如何配置一个高效的 Mac 工作环境</a>》 by zhangmeng</p>
-<p>《<a href="http://drops.wooyun.org/papers/9598" target="_blank" rel="external">iOS APP安全杂谈之三</a>》 by zhangmeng</p>
-<p>iOS架构总结贴，根据上周桉远推荐的一片文章挖出来的全系列，确实是平时在设计架构的过程中经常踩的坑： by zhangmeng</p>
-<p>《<a href="http://casatwy.com/tiao-chu-mian-xiang-dui-xiang-si-xiang-yi-ji-cheng.html" target="_blank" rel="external">跳出面向对象思想(一) 继承</a>》</p>
-<p>《<a href="http://casatwy.com/tiao-chu-mian-xiang-dui-xiang-si-xiang-er-duo-tai.html" target="_blank" rel="external">跳出面向对象思想(二) 多态</a>》</p>
-<p>《<a href="http://casatwy.com/tiao-chu-mian-xiang-dui-xiang-si-xiang-san-feng-zhuang.html" target="_blank" rel="external">跳出面向对象思想(三) 封装</a>》</p>
-<p>《<a href="http://casatwy.com/iosying-yong-jia-gou-tan-kai-pian.html" target="_blank" rel="external">iOS应用架构谈 开篇</a>》</p>
-<p>《<a href="http://casatwy.com/iosying-yong-jia-gou-tan-viewceng-de-zu-zhi-he-diao-yong-fang-an.html" target="_blank" rel="external">iOS应用架构谈 view层的组织和调用方案</a>》</p>
-<p>《<a href="http://casatwy.com/iosying-yong-jia-gou-tan-wang-luo-ceng-she-ji-fang-an.html" target="_blank" rel="external">iOS应用架构谈 网络层设计方案</a>》</p>
-<p>《<a href="http://casatwy.com/iosying-yong-jia-gou-tan-ben-di-chi-jiu-hua-fang-an-ji-dong-tai-bu-shu.html" target="_blank" rel="external">iOS应用架构谈 本地持久化方案及动态部署</a>》</p>
-<p>《<a href="http://www.oreilly.com/programming/free/files/software-architecture-patterns.pdf" target="_blank" rel="external">Software Architecture Patterns pdf</a>》</p>
-<p>以及Hacker News上关于这本书的讨论：<a href="https://news.ycombinator.com/item?id=9310576" target="_blank" rel="external">https://news.ycombinator.com/item?id=9310576</a></p>
-<p>再补一篇 by zhangmeng 《<a href="http://www.starming.com/index.php?v=index&amp;view=83" target="_blank" rel="external">构建iOS稳定应用架构时方案选择的思考</a>》</p>
-<p>《<a href="http://mp.weixin.qq.com/s?__biz=MzI1MTA1MzM2Nw==&amp;mid=207840007&amp;idx=1&amp;sn=ce09553e5774f5581c696b5e28f0c7e8#rd" target="_blank" rel="external">iOS高性能图片架构与设计</a>》 by zhangmeng</p>
-<p>两篇<code>Autolayout</code>的文章： by zhangmeng</p>
-<p>《<a href="http://oleb.net/blog/2013/03/things-you-need-to-know-about-cocoa-autolayout/" target="_blank" rel="external">10 Things You Need to Know About Cocoa Auto Layout</a>》</p>
-<p>《<a href="https://www.bignerdranch.com/blog/ios-autolayout-fun-facts-and-tips/" target="_blank" rel="external">iOS Auto Layout: Fun Facts and Tips</a>》</p>
-<h3 id="开源代码：">开源代码：</h3><p><a href="https://github.com/steipete/Aspects" target="_blank" rel="external">Aspects</a>  by zhangmeng：再也不用自己写丑陋的method swizzling代码了。</p>
-<h3 id="Xcode插件">Xcode插件</h3><ol>
-<li>之前新宁推荐了一个插件管理工具Alcatraz <a href="http://alcatraz.io" target="_blank" rel="external">http://alcatraz.io</a></li>
-<li>XTodo: <a href="https://github.com/trawor/XToDo" target="_blank" rel="external">https://github.com/trawor/XToDo</a> 收集项目中的所有TODO,FIXME,???, !!!，并提供了一个页面用于查看。</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/19/20151019/" data-id="cikwg2vs1000ldqitofz4cqap" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/10/26/20151026/" data-id="cil6jsye5000lt9itviryll8f" class="article-share-link">Share</a>
       
       
     </footer>
@@ -634,7 +629,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -644,6 +639,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/02/28/20160228/">2016.02.28技术周报</a>
+          </li>
         
           <li>
             <a href="/2016/02/21/20160221/">2016.02.21技术周报</a>
@@ -659,10 +658,6 @@
         
           <li>
             <a href="/2016/01/31/20160201/">2016.02.01技术周报</a>
-          </li>
-        
-          <li>
-            <a href="/2016/01/24/20160125/">2016.01.25技术周报</a>
           </li>
         
       </ul>
